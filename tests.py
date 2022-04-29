@@ -50,3 +50,13 @@ class TestCase(unittest.TestCase):
         test_pwd = 'as7dfg7639g'
         self.assertFalse(check_pwd(test_pwd),
                          msg=''.format(check_pwd(test_pwd)))
+
+    # Capital and lowercase letters only
+    def test8(self):
+        test_pwd = 'asdYYfgFGjhDF'
+        self.assertFalse(check_pwd(test_pwd),
+                         msg=''.format(check_pwd(test_pwd)))
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
