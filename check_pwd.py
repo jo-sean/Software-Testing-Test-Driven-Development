@@ -30,4 +30,8 @@ def check_pwd(pwd):
     if set(pwd).isdisjoint(symbols_allowed):
         return False
 
+    if set(pwd).difference(ascii_lowercase + ascii_uppercase
+                           + digits + symbols_allowed):
+        return False
+
     return True
