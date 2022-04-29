@@ -14,3 +14,7 @@ class TestCase(unittest.TestCase):
         self.assertFalse(check_pwd(test_pwd),
                          msg=''.format(check_pwd(test_pwd)))
 
+    def test2(self):
+        test_pwd = 'aj7fg45'
+        self.assertFalse(check_pwd(test_pwd),
+                         msg=''.format(check_pwd(test_pwd)))
