@@ -10,4 +10,7 @@ class TestCase(unittest.TestCase):
     """TDD implementation"""
 
     def test1(self):
-        pass
+        test_pwd = ''
+        self.assertFalse(check_pwd(test_pwd),
+                         msg=''.format(check_pwd(test_pwd)))
+
