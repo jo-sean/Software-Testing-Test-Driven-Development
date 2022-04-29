@@ -2,6 +2,8 @@
 # CS 362: A2
 # Date: 4.29.22
 
+from string import ascii_lowercase
+
 
 def check_pwd(pwd):
     if not pwd:
@@ -11,6 +13,9 @@ def check_pwd(pwd):
         return False
 
     if len(pwd) >= 21:
+        return False
+
+    if set(pwd).isdisjoint(ascii_lowercase):
         return False
 
     return True
