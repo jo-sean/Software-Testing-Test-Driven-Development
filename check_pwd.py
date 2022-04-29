@@ -2,7 +2,7 @@
 # CS 362: A2
 # Date: 4.29.22
 
-from string import ascii_lowercase
+from string import ascii_lowercase, ascii_uppercase
 
 
 def check_pwd(pwd):
@@ -16,6 +16,9 @@ def check_pwd(pwd):
         return False
 
     if set(pwd).isdisjoint(ascii_lowercase):
+        return False
+
+    if set(pwd).isdisjoint(ascii_uppercase):
         return False
 
     return True
