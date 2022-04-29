@@ -26,3 +26,9 @@ class TestCase(unittest.TestCase):
         test_pwd = 'aj7fg57fhe7trf74jds92'
         self.assertFalse(check_pwd(test_pwd),
                          msg=''.format(check_pwd(test_pwd)))
+
+    # Character length less than 8
+    def test4(self):
+        test_pwd = 'aj7f'
+        self.assertFalse(check_pwd(test_pwd),
+                         msg=''.format(check_pwd(test_pwd)))
