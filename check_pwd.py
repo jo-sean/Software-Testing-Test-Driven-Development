@@ -6,6 +6,9 @@ from string import ascii_lowercase, ascii_uppercase, digits
 
 
 def check_pwd(pwd):
+
+    symbols_allowed = "~`!@#$%^&*()_+-="
+
     if not pwd:
         return False
 
@@ -22,6 +25,9 @@ def check_pwd(pwd):
         return False
 
     if set(pwd).isdisjoint(digits):
+        return False
+
+    if set(pwd).isdisjoint(symbols_allowed):
         return False
 
     return True
