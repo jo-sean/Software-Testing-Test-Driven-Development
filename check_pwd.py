@@ -6,4 +6,8 @@
 def check_pwd(pwd):
     if not pwd:
         return False
+
+    if len(pwd) == 7:
+        return False
+
     return True
