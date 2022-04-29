@@ -44,3 +44,9 @@ class TestCase(unittest.TestCase):
         test_pwd = 'AD2FGH9H8976'
         self.assertFalse(check_pwd(test_pwd),
                          msg=''.format(check_pwd(test_pwd)))
+
+    # Lowercase letters and numbers only
+    def test7(self):
+        test_pwd = 'as7dfg7639g'
+        self.assertFalse(check_pwd(test_pwd),
+                         msg=''.format(check_pwd(test_pwd)))
